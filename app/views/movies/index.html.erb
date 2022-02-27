@@ -4,10 +4,10 @@
   Include:
   <% @all_ratings.each do |rating| %>
     <%= rating %>
-    <%= check_box_tag "ratings[#{rating}]" %>
+    <%= check_box_tag "ratings[#{rating}]",'',('checked' if @t_param.include? rating) %>
   <% end %>
-  <%= submit_tag 'Refresh', :class => 'btn btn-primary' %>
-<% end %></h2>
+  <%= submit_tag 'Refresh', :class => 'btn btn-primary' %></h2>
+<% end %>
   
 
 <%#  Part 1: Start here... %>
